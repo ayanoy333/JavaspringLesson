@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SpringRest1Application",
+            "request": "launch",
+            "mainClass": "dev.itboot.rest.SpringRest1Application",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "DemoApplication",
+            "request": "launch",
+            "mainClass": "com.example.demo.DemoApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "App",
             "request": "launch",
             "mainClass": "com.example.demo.controller.test.src.App",
@@ -14,6 +28,16 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.example.demo.SpringBoot14Application",
             "projectName": "spring-boot1-4",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoApplication<demo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.demo.DemoApplication",
+            "projectName": "demo",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
