@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>リンク集</title>
+  </head>
+  <body>
+    <canvas id="sample" width="200" height="200"></canvas>
+    <video src="C:\Users\tanpopo3\Downloads\ビデオ.MOV" width="50" height="50"></video>
+
+    <script>
+      var element = document.getElementById("sample");
+      var context = element.getContext("2d");
+
+      context.beginPath();
+
+      context.arc(
+        100,
+        100,
+        100,
+        (0 * Math.PI) / 180,
+        (360 * Math.PI) / 180,
+        false
+      );
+      context.fillStyle = "#317cc4cc";
+      context.fill();
+    </script>
+  </body>
+</html>

@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RestApplication",
+            "request": "launch",
+            "mainClass": "dev.itboot.rest.RestApplication"
+        },
+        {
+            "type": "java",
             "name": "SpringRest1Application",
             "request": "launch",
             "mainClass": "dev.itboot.rest.SpringRest1Application",

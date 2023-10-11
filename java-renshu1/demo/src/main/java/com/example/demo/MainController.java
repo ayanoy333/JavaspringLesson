@@ -1,6 +1,3 @@
-package com.example;
-
-public
 package com.example.demo;
 
 import org.springframework.stereotype.Controller;
@@ -8,14 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class MainController {
-    @GetMapping("/")
-    String hello(){
-        return ("hello");
+    @GetMapping ("/")
+    public String start(){
+        return("start");
     }
-    @GetMapping("/support")
-    String support(){
-        return ("support");
+    @GetMapping("/help")
+    public String help(){
+        return("help");
     }
-}{
-
 }
