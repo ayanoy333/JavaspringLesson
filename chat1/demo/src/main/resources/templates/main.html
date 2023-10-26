@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Chat App</title>
+    <style>
+      /* Add your CSS styles for the chat interface here */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      #chat-container {
+        width: 300px;
+        margin: 0 auto;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      #chat-messages {
+        border: 1px solid #ccc;
+        padding: 10px;
+        max-height: 300px;
+        overflow-y: auto;
+      }
+      #user-input {
+        display: flex;
+        margin-top: 10px;
+      }
+      #message-input {
+        flex: 1;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        padding: 5px;
+      }
+      #send-button {
+        margin-left: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chat-container">
+      <div id="chat-messages"></div>
+      <div id="user-input">
+        <input type="text" id="message-input" placeholder="Type your message" />
+        <button id="send-button">Send</button>
+      </div>
+    </div>
+
+    <script>
+      const chatMessages = document.getElementById("chat-messages");
+      const messageInput = document.getElementById("message-input");
+      const sendButton = document.getElementById("send-button");
+
+      // Function to append a message to the chat
+      function appendMessage(message, isUser) {
+        const messageDiv = document.createElement("div");
+        messageDiv.className = isUser ? "user-message" : "other-message";
+        messageDiv.textContent = message;
+        chatMessages.appendChild(messageDiv);
+      }
+
+      // Event handler for sending a message
+      sendButton.addEventListener("click", () => {
+        const message = messageInput.value;
+        if (message) {
+          appendMessage(`You: ${message}`, true);
+          messageInput.value = "";
+        }
+      });
+
+      // Simulate a received message (for demonstration)
+      setTimeout(() => {
+        appendMessage("Friend: Hello!", false);
+      }, 1000);
+    </script>
+  </body>
+</html>
